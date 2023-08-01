@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+// VARIABLES
+$primary-color: #42454A;
+$primary-typo: 'Ubuntu';
+
+// MIXINS
+@mixin flexbox($justify-content: space-around, $align-items: center) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+@mixin link {
+    text-transform: uppercase;
+    font-family: $primary-typo;
+    font-size: 14px;
+}
+@mixin baliseA {
+    color: inherit;
+    text-decoration: none;
+}
+@mixin title {
+    @include flexbox;
+    padding: 20px 0;
+    font-family: $primary-typo;
+    font-size: 50px;
+    font-weight: bold;
+}
+@mixin subtitle {
+    @include flexbox;
+    padding: 20px 0;
+    font-family: $primary-typo;
+    font-size: 20px;
+    font-weight: 400;
+}
+@mixin btn {
+    display: flex;
+    margin: 50px auto;
+    border: 2px solid #42454A;
+    color: black;
+    padding: 25px 70px;
+    font-family: $primary-typo;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+@mixin Characteristic {
+    @include flexbox($justify-content: flex-end);
+    gap: 20px;
+}
+
+// GENERAL
+a {
+    color: inherit;
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// CODE
+
+// NAVBAR
+.header {
+    padding: 30px 0;
+    border-bottom: 1px solid $primary-color;
+    @include flexbox;
+    &__links {
+        @include flexbox;
+        gap: 100px;
+        a {
+            @include link;
+        }
+    }
+    &__btn {
+        @include flexbox;
+        gap: 50px;
+        &--login {
+            @include link;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+        }
+        &--signup {
+            @extend .header__btn--login;
+            background-color: $primary-color;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+// HEADER
+.bothSection {
+    @include flexbox($justify-content: space-around);
+    .leftSection {
+        @include flexbox($justify-content: space-between, $align-items: flex-start);
+        flex-direction: column;
+        .title {
+            color: $primary-color;
+            text-transform: uppercase;
+            font-family: $primary-typo;
+            font-size: 90px;
+            font-weight: 100;
+            &__bold {
+                font-weight: bold;
+            }
+        }
+        .verticalbar {
+            height: 5px;
+            background-color: $primary-color;
+            width: 300px;
+            margin-bottom: 100px;
+        }
+        .subtitle {
+            color: $primary-color;
+            font-size: 22px;
+            font-family: $primary-typo;
+            border: none;
+            line-height: 40px;
+            padding-bottom: 30px;
+        }
+        
+        // Buttons
+        .buttons {
+            @include flexbox($justify-content: none);
+            &__arrow {
+                background-color: $primary-color;
+                padding: 20px 15px;
+                margin-right: 20px;
+            }
+            &__buy {
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                font-family: $primary-typo;
+                font-size: 20px;
+                font-weight: 500;
+                margin-right: 80px;
+            }
+            &__watch {
+                @extend .buttons__buy;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+    
+    // Right Section
+    .rightSection {
+        @include flexbox;
+        position: relative;
+        flex-direction: column;
+        gap: 50px;
+        &__circle {
+            position: absolute;
+            background-color: #DBDBDB;
+            padding: 30%;
+            margin: auto 0;
+            border-radius: 300px;
+        }
+        .sectionSwitch {
+            @include flexbox($justify-content: center);
+            p {
+                font-family: 'Calistoga';
+                font-size: 150px;
+                color: $primary-color;
+            }
+            .twoButtons {
+                &__left {
+                    background-color: rgba(0, 0, 0, 0);
+                    border: solid 1px $primary-color;
+                    height: 50px;
+                    width: 60px;
+                    border-radius: 30px 0 0 30px;
+                }
+                &__right {
+                    @extend .twoButtons__left;
+                    border-radius: 0 30px 30px 0;
+                }
+            }
+        }
+    }
+}
+
+
+// HEADER END
+
+// FEATURES
+
+.allFeatures {
+    padding: 50px 100px;
+    @include flexbox;
+    flex-direction: row;
+    .card {
+        @include flexbox;
+        flex-direction: column;
+        gap: 15px;
+        padding: 35px;
+        box-shadow: 0px 0px 10px 1px #E6DADA;
+        font-family: $primary-typo;
+        color: $primary-color;
+        font-weight: bold;
+        &__number {
+            font-family: $primary-typo;
+            font-size: 40px;
+            &--text {
+                font-family: $primary-typo;
+                font-size: 18px;
+            }
+        }
+        &__feature {
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0 auto;
+        }
+    }
+}
+
+// SECTION PRODUCT INFORMATION
+.sectionProduct {
+    .sectionRightLeft {
+        @include flexbox($justify-content: center);
+        gap: 100px;
+        .listsCharacteristics {
+            @include flexbox($align-items: flex-start);
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__characteristic {
+        @include Characteristic;
+        &--text {
+            font-family: $primary-typo;
+            gap: 20px;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 20px 0;
+        }
+    }
+}
+
+// SECTION HIGH EFFICIENCY MOTOR
+.sectionWheel {
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__img {
+        @include flexbox;
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+// SECTION MULTIPLE ACCESSORIES
+.sectionAccessories {
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__all {
+        @include flexbox($justify-content: center);
+        gap: 200px;
+    }
+
+
+    &__left {
+        &--title {
+            @include title;
+        }
+        &--characteristic {
+            @include Characteristic;
+            justify-content: flex-start;
+            .characteristicText {
+                @extend .sectionProduct__characteristic--text;
+            }
+        }
+    }
+    &__right {
+        img {
+           width: 500px;
+        }
+    }
+}
+
+// Shopping Rank 
+.sectionShopping {
+    @extend .sectionAccessories__all;
+    flex-direction: row-reverse;
+    &__title {
+        @include title;
+    }
+    &__block {
+        @include flexbox;
+        flex-direction: column;
+        align-items: flex-start;
+        &--characteristic {
+            @include Characteristic;
+        }
+    }
+    .imgInbox {
+        width: 300px;
+    }
+    .imgBack {
+        width: 470px;
+    }
+}
+.btnAccessories {
+    @include btn;
+}
+
+// SECTION GALLERY
+.sectionGallery {
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+        margin: 50px 0;
+    }
+    &__sections {
+        @include flexbox($justify-content: center);
+        flex-direction: row-reverse;
+        gap: 100px;
+        .sectionRight {
+            @include flexbox;
+            flex-direction: column;
+            height: 100%;
+            .galleryImg {
+                position: relative;
+                width: 633px;
+                &__text {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    color: #42454A;
+                    font-family: $primary-typo;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+                &__textParts {
+                    top: 110px;
+                }
+                &__img {
+                    width: 633px;
+                }
+            }
+        }
+    }
+    .sectionLeft {
+        @include flexbox;
+        flex-direction: column;
+        align-items: end;
+        &__img {
+            position: relative;
+            width: auto;  
+        }
+        &__text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #42454A;
+            font-family: $primary-typo;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        &__buttons { 
+            @include flexbox($justify-content: center);
+            flex-direction: column;
+            margin-top: 30px;
+            width: 100%;
+            &--btn {
+                @include btn;
+                margin: 10px auto;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+// SECTION COLORS 
+.sectionColors {
+    @include flexbox($justify-content: center);
+    flex-direction: column;
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__background {
+        width: 40%;
+        margin: -200px;
+    }
+
+    &__cards {
+        @include flexbox($justify-content: space-around);
+        .cardColors {
+            border-radius: 10px;
+            width: 20%;
+            &__color {
+            }
+            &__number {
+
+            }
+        }
+    }
+
+}
+
