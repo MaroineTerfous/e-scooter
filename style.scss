@@ -36,8 +36,9 @@ $primary-typo: 'Ubuntu';
 }
 @mixin btn {
     display: flex;
+    color: $primary-color;
     margin: 50px auto;
-    border: 2px solid #42454A;
+    border: 2px solid $primary-color;
     color: black;
     padding: 25px 70px;
     font-family: $primary-typo;
@@ -46,6 +47,10 @@ $primary-typo: 'Ubuntu';
     border-radius: 10px;
     background-color: #fff;
     cursor: pointer;
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
 }
 @mixin Characteristic {
     @include flexbox($justify-content: flex-end);
@@ -56,6 +61,9 @@ $primary-typo: 'Ubuntu';
 a {
     color: inherit;
     text-decoration: none;
+}
+p, h1, h2 {
+    color: $primary-color;
 }
 * {
     margin: 0;
@@ -348,7 +356,7 @@ a {
                     position: absolute;
                     top: 20px;
                     left: 20px;
-                    color: #42454A;
+                    color: $primary-color;
                     font-family: $primary-typo;
                     font-size: 30px;
                     font-weight: 700;
@@ -374,7 +382,7 @@ a {
             position: absolute;
             top: 20px;
             left: 20px;
-            color: #42454A;
+            color: $primary-color;
             font-family: $primary-typo;
             font-size: 30px;
             font-weight: 700;
@@ -439,8 +447,15 @@ a {
     margin: 50px;
     &__title {
         @include title;
+        padding: 50px 0;
+    }
+    .cardsTestimonals {
+        @include flexbox;
     }
     .card {
+        @include flexbox;
+        flex-direction: column;
+        gap: 20px;
         width: 20%;
         background-color: #fff;
         padding: 50px;
@@ -456,10 +471,12 @@ a {
             font-size: 28px;
             font-family: $primary-typo;
             font-weight: 400;
+            text-align: center;
 
         }
         &__customer {
-            @include flexbox;
+            @include flexbox($justify-content: center);
+            gap: 30px;
             .picture {
                 background-color: black;
                 width: 75px;
@@ -469,19 +486,56 @@ a {
             .nameFunction {
                 @include flexbox;
                 flex-direction: column;
+                gap: 10px;
                 .name {
                     @include subtitle;
-                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 500;
                     padding: 0;
                 }
                 .function {
                     @extend .name;
+                    font-size: 14px;
+                    font-weight: 400;
                 }
             }
         }
     }
+
+    // directional arrows
+    .arrows {
+        @include flexbox($justify-content: center);
+        gap: 20px;
+        padding: 40px 0;
+        &__left {
+            @include flexbox;
+            color: $primary-color;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid $primary-color;
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+        &__right {
+            @extend .arrows__left;
+        }
+    }
 }
 
+// SECTION SUBCRIBE
+.sectionSubcribe {
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__form {
+        &--btn {
 
-
-
+        }
+    }
+}

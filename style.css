@@ -5,6 +5,10 @@ a {
   text-decoration: none;
 }
 
+p, h1, h2 {
+  color: #42454A;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -323,6 +327,7 @@ a {
 
 .btnAccessories {
   display: flex;
+  color: #42454A;
   margin: 50px auto;
   border: 2px solid #42454A;
   color: black;
@@ -333,6 +338,10 @@ a {
   border-radius: 10px;
   background-color: #fff;
   cursor: pointer;
+}
+.btnAccessories:hover {
+  background-color: #42454A;
+  color: white;
 }
 
 .sectionGallery__title {
@@ -417,6 +426,7 @@ a {
 }
 .sectionGallery .sectionLeft__buttons--btn {
   display: flex;
+  color: #42454A;
   margin: 50px auto;
   border: 2px solid #42454A;
   color: black;
@@ -430,6 +440,10 @@ a {
   margin: 10px auto;
   width: 100%;
   justify-content: center;
+}
+.sectionGallery .sectionLeft__buttons--btn:hover {
+  background-color: #42454A;
+  color: white;
 }
 
 .sectionTestimonals {
@@ -445,8 +459,19 @@ a {
   font-family: "Ubuntu";
   font-size: 50px;
   font-weight: bold;
+  padding: 50px 0;
+}
+.sectionTestimonals .cardsTestimonals {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .sectionTestimonals .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
   width: 20%;
   background-color: #fff;
   padding: 50px;
@@ -465,11 +490,13 @@ a {
   font-size: 28px;
   font-family: "Ubuntu";
   font-weight: 400;
+  text-align: center;
 }
 .sectionTestimonals .card__customer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
 }
 .sectionTestimonals .card__customer .picture {
   background-color: black;
@@ -482,6 +509,7 @@ a {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  gap: 10px;
 }
 .sectionTestimonals .card__customer .nameFunction .name, .sectionTestimonals .card__customer .nameFunction .function {
   display: flex;
@@ -491,6 +519,52 @@ a {
   font-family: "Ubuntu";
   font-size: 20px;
   font-weight: 400;
-  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
   padding: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+.sectionTestimonals .card__customer .nameFunction .function {
+  font-size: 14px;
+  font-weight: 400;
+}
+.sectionTestimonals .arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+.sectionTestimonals .arrows__left, .sectionTestimonals .arrows__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #42454A;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #42454A;
+}
+.sectionTestimonals .arrows__left:hover, .sectionTestimonals .arrows__right:hover {
+  background-color: #42454A;
+  color: white;
+}
+.sectionSubcribe__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-family: "Ubuntu";
+  font-size: 50px;
+  font-weight: bold;
+}
+.sectionSubcribe__subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-family: "Ubuntu";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */
