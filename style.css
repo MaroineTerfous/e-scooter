@@ -566,5 +566,58 @@ p, h1, h2 {
   font-size: 20px;
   font-weight: 400;
 }
+.sectionSubcribe__form--btn {
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 25px;
+  background-color: #42454A;
+  border-radius: 30px;
+  padding: 35px 90px;
+  border: none;
+  margin: 100px 500px;
+}
 
-/*# sourceMappingURL=style.css.map */
+.footer {
+  background-color: #42454A;
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+.footer__links {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__links--socialmedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.footer__links--socialmedia i {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: #42454A;
+}
+.footer h3 {
+  color: #fbfbfb;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Ubuntu";
+}
+.footer p {
+  font-family: "Ubuntu";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fbfbfb;
+}/*# sourceMappingURL=style.css.map */

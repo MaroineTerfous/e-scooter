@@ -535,7 +535,55 @@ p, h1, h2 {
     }
     &__form {
         &--btn {
-
+            color: white;
+            font-family: $primary-typo;
+            font-size: 25px;
+            background-color: $primary-color;
+            border-radius: 30px;
+            padding: 35px 90px;
+            border: none;
+            margin: 100px 500px;
         }
+    }
+}
+
+// FOOTER
+.footer {
+    background-color: $primary-color;
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+    @include flexbox($align-items: start);
+    // img {
+    //     translate: -100px;
+    // }
+    &__links {
+        @include flexbox($align-items: start);
+        flex-direction: column;
+        gap: 30px;
+        &--socialmedia {
+            @include flexbox;
+            gap: 20px;
+            i {
+                @include flexbox;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: white;
+                color: $primary-color;
+            }
+        }
+    }
+    h3 {
+        color: #fbfbfb;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: $primary-typo;
+    }
+    p {
+        font-family: $primary-typo;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fbfbfb;
     }
 }
