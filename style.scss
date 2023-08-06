@@ -395,33 +395,93 @@ a {
 }
 
 
-// SECTION COLORS 
-.sectionColors {
-    @include flexbox($justify-content: center);
-    flex-direction: column;
+// SECTION CHOICE COLORS 
+// .sectionColors {
+//     @include flexbox($justify-content: center);
+//     flex-direction: column;
+//     &__title {
+//         @include title;
+//     }
+//     &__subtitle {
+//         @include subtitle;
+//     }
+//     &__background {
+//         width: 40%;
+//         margin: -200px;
+//     }
+
+//     &__cards {
+//         @include flexbox($justify-content: space-around);
+//         width: 100%;
+//         .cardColors {
+//             width: 20%;
+//             &__color {
+//                 border-radius: 20px;
+//                 position: absolute;
+//             }
+//             &__number {
+//                 position: relative;
+//                 color: #fff;
+//                 bottom: -500px;
+//                 left: 450px;
+//                 font-size: 150px;
+//                 font-weight: 700;
+//                 font-family: $primary-typo;
+//             }
+//         }
+//     }
+// }
+
+// TESTIMONALS
+.sectionTestimonals {
+    background-color: #FAFAFA;
+    padding: 50px;
+    margin: 50px;
     &__title {
         @include title;
     }
-    &__subtitle {
-        @include subtitle;
-    }
-    &__background {
-        width: 40%;
-        margin: -200px;
-    }
+    .card {
+        width: 20%;
+        background-color: #fff;
+        padding: 50px;
+        border: 1px solid $primary-color;
+        &__stars {
+            font-size: 20px;
+            color: #FE8B75;
+            @include flexbox($justify-content: center);
+            gap: 5px;
+            margin: 10px 0;
+        }
+        &__testimonals {
+            font-size: 28px;
+            font-family: $primary-typo;
+            font-weight: 400;
 
-    &__cards {
-        @include flexbox($justify-content: space-around);
-        .cardColors {
-            border-radius: 10px;
-            width: 20%;
-            &__color {
+        }
+        &__customer {
+            @include flexbox;
+            .picture {
+                background-color: black;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
             }
-            &__number {
-
+            .nameFunction {
+                @include flexbox;
+                flex-direction: column;
+                .name {
+                    @include subtitle;
+                    margin: 0;
+                    padding: 0;
+                }
+                .function {
+                    @extend .name;
+                }
             }
         }
     }
-
 }
+
+
+
 

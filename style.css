@@ -432,13 +432,12 @@ a {
   justify-content: center;
 }
 
-.sectionColors {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.sectionTestimonals {
+  background-color: #FAFAFA;
+  padding: 50px;
+  margin: 50px;
 }
-.sectionColors__title {
+.sectionTestimonals__title {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -447,7 +446,44 @@ a {
   font-size: 50px;
   font-weight: bold;
 }
-.sectionColors__subtitle {
+.sectionTestimonals .card {
+  width: 20%;
+  background-color: #fff;
+  padding: 50px;
+  border: 1px solid #42454A;
+}
+.sectionTestimonals .card__stars {
+  font-size: 20px;
+  color: #FE8B75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+.sectionTestimonals .card__testimonals {
+  font-size: 28px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+}
+.sectionTestimonals .card__customer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sectionTestimonals .card__customer .picture {
+  background-color: black;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.sectionTestimonals .card__customer .nameFunction {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.sectionTestimonals .card__customer .nameFunction .name, .sectionTestimonals .card__customer .nameFunction .function {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -455,17 +491,6 @@ a {
   font-family: "Ubuntu";
   font-size: 20px;
   font-weight: 400;
-}
-.sectionColors__background {
-  width: 40%;
-  margin: -200px;
-}
-.sectionColors__cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.sectionColors__cards .cardColors {
-  border-radius: 10px;
-  width: 20%;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
