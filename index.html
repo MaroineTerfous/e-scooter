@@ -44,9 +44,7 @@
             <p class="subtitle">Simple and sleek design with users <br>in mind.</p>
             <!-- Buttons -->
             <div class="buttons">
-                <svg width="25" height="10" viewBox="0 0 25 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="buttons__arrow">
-                    <path d="M24.5 5L18.4655 -7.19605e-08L18.4655 4L0.5 4L0.5 6L18.4655 6L18.4655 10L24.5 5Z" fill="#F7EAE3"/>
-                    </svg>
+                <i class="fa-solid fa-right-long buttons__arrow"></i>
                 <button class="buttons__buy"><a href="">Buy now</a></button>
                 <button class="buttons__watch"><a href="">Watch our <br>video how <br>it works</a></button>
             </div>
@@ -405,7 +403,11 @@
     <div class="sectionSubcribe">
         <h2 class="sectionSubcribe__title">Subscribe To Newsletter</h2>
         <p class="sectionSubcribe__subtitle">Subscribe to our newsletter to get amazing offers in future.</p>
+        <!-- Form -->
         <div class="sectionSubcribe__form">
+            <form action="">
+                <input type="email" id="name" name="name" required minlength="4" maxlength="8" size="20" />
+            </form>
             <button class="sectionSubcribe__form--btn btnSubscribe">Get start</button>
         </div>
     </div>
