@@ -536,14 +536,19 @@ p, h1, h2 {
     }
     &__form {
         @include flexbox($justify-content: center);
+        gap: 10px;
         margin: 100px 0;
-        input {
+        &--input {
+            font-family: $primary-color;
+            font-weight: 400;
+            font-size: 25px;
+            color: $primary-typo;
             padding: 35px 90px;
             border-radius: 10px;
             border: none;
             background-color: #f5f5f5;
         }
-        &--btn {
+        &--submit {
             color: white;
             font-weight: 400;
             font-family: $primary-typo;

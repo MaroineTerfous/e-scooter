@@ -571,15 +571,20 @@ p, h1, h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   margin: 100px 0;
 }
-.sectionSubcribe__form input {
+.sectionSubcribe__form--input {
+  font-family: #42454A;
+  font-weight: 400;
+  font-size: 25px;
+  color: "Ubuntu";
   padding: 35px 90px;
   border-radius: 10px;
   border: none;
   background-color: #f5f5f5;
 }
-.sectionSubcribe__form--btn {
+.sectionSubcribe__form--submit {
   color: white;
   font-weight: 400;
   font-family: "Ubuntu";
@@ -633,6 +638,4 @@ p, h1, h2 {
   font-size: 16px;
   font-weight: 400;
   color: #fbfbfb;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
