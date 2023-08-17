@@ -404,42 +404,67 @@ p, h1, h2 {
 }
 
 
-// SECTION CHOICE COLORS 
-// .sectionColors {
-//     @include flexbox($justify-content: center);
-//     flex-direction: column;
-//     &__title {
-//         @include title;
-//     }
-//     &__subtitle {
-//         @include subtitle;
-//     }
-//     &__background {
-//         width: 40%;
-//         margin: -200px;
-//     }
 
-//     &__cards {
-//         @include flexbox($justify-content: space-around);
-//         width: 100%;
-//         .cardColors {
-//             width: 20%;
-//             &__color {
-//                 border-radius: 20px;
-//                 position: absolute;
-//             }
-//             &__number {
-//                 position: relative;
-//                 color: #fff;
-//                 bottom: -500px;
-//                 left: 450px;
-//                 font-size: 150px;
-//                 font-weight: 700;
-//                 font-family: $primary-typo;
-//             }
-//         }
-//     }
-// }
+
+
+
+
+
+
+
+
+
+
+// SECTION CHOICE COLORS 
+.sectionColors {
+    @include flexbox($justify-content: center);
+    flex-direction: column;
+    margin: 100px 0;
+    &__title {
+        @include title;
+    }
+    &__subtitle {
+        @include subtitle;
+    }
+    &__background {
+        width: 40%;
+        margin: -200px;
+    }
+
+    &__cards {
+        @include flexbox($justify-content: space-around);
+        width: 100%;
+        .cardColors {
+            @include flexbox($justify-content: center);
+            &__color {
+                width: 60%;
+                border-radius: 20px;
+            }
+            &__number {
+                color: #fff;
+                bottom: -500px;
+                left: 450px;
+                font-size: 150px;
+                font-weight: 700;
+                font-family: $primary-typo;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // TESTIMONALS
 .sectionTestimonals {
@@ -537,7 +562,7 @@ p, h1, h2 {
     &__form {
         @include flexbox($justify-content: center);
         gap: 10px;
-        margin: 100px 0;
+        margin: 50px 0 100px 0;
         &--input {
             font-family: $primary-color;
             font-weight: 400;
@@ -547,6 +572,7 @@ p, h1, h2 {
             border-radius: 10px;
             border: none;
             background-color: #f5f5f5;
+            color: $primary-color;
         }
         &--submit {
             color: white;
